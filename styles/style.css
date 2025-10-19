@@ -324,9 +324,6 @@ button {
   overflow: visible;
 }
 
- use {
-  scale: 2;
-}
 
 .dialog-text {
   font-family: var(--accent-font), Arial, Helvetica, sans-serif;
