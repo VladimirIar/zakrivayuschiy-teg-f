@@ -12,13 +12,13 @@
 
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
-  font-variation-settings: 'wght' var(--card-main-weight);
   background-image: var(--background-gradient);
   background-size: cover;
   background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--card-main-weight);
 }
 
 .page:has(.continue-dialog[open]) {
@@ -26,22 +26,22 @@
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-block: 100px;
+  border: 2px #000 solid;
+  font-family: var(--accent-font);
+  background-color: #fff;
   inline-size: var(--blocks-width);
   block-size: 327px;
-  font-family: var(--accent-font);
-  margin-block: 100px;
-  margin-inline: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #fff;
-  border: 2px #000 solid;
 }
 
 .header-logo {
-  font-size: clamp(3.0625rem, 2.71rem + 1.50vw, 4.0625rem);
   margin-block-end: 20px;
+  font-size: clamp(3.0625rem, 2.71rem + 1.50vw, 4.0625rem);
   text-transform: uppercase;
 }
 
@@ -50,21 +50,21 @@
 }
 
 .section {
-  inline-size: var(--blocks-width);
 
   margin-inline: auto;
+  inline-size: var(--blocks-width);
 }
 
 .card {
+  margin-block-end: 50px;
   border: 2px #000 solid;
   background-color: #fff;
-  margin-block-end: 50px;
 }
 
 .card-header {
-  font-weight: var(--card-title-weight);
   margin-inline: 10px;
   margin-block: 4px;
+  font-weight: var(--card-title-weight);
   font-size: 1.125rem;
 }
 
@@ -106,6 +106,10 @@
 
 .image-label {
   position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+  opacity: 0.5;
   font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -114,18 +118,14 @@
     -1px 1px 0 #fff,
     1px -1px 0 #fff,
     -1px -1px 0 #fff;
-  opacity: 0.5;
-  top: 25px;
-  right: 25px;
-  z-index: 1;
   mix-blend-mode: hard-light;
 }
 
 @supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .image-label {
+    text-shadow: none;
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
-    text-shadow: none;
   }
 } 
 
@@ -140,19 +140,19 @@
 
 .card__button {
   display: flex;
-  align-self: self-end;
+  justify-items: end;
   justify-self: self-end;
+  align-items: center;
+  align-self: self-end;
   padding-inline-end: 25px;
   padding-block-end: 25px;
-  align-items: center;
-  justify-items: end;
 }
 
 .card__icon-button {
   all: unset;
-  margin-inline-end: 12px;
   width: 38px;
   height: 38px;
+  margin-inline-end: 12px;
   transition: outline 0.3s ease;
 }
 
@@ -174,7 +174,7 @@
 }
 
 .core {
-  transition: fill linear 0.3s 0.03s 
+  transition: fill linear 0.3s 0.03s; 
 }
 
 .heart{
@@ -211,8 +211,8 @@
 
 
 .like-icon.is-liked .contour {
-  transition: fill linear 0.3s 0.06s;
   fill: var(--animation-fill-colour);
+  transition: fill linear 0.3s 0.06s;
 }
 
 .like-icon.is-liked .main-body {
@@ -229,30 +229,30 @@
   all: unset;
   position: relative;
   border: 2px solid #000;
-  block-size: 38px;
-  inline-size: 130px; 
+  overflow: hidden; 
   text-align: center;
   transition: box-shadow 0.3s ease;
-  overflow: hidden;
   transition: border 0.3s ease;
+  block-size: 38px;
+  inline-size: 130px;
   
 }
 
 button:not(.card__icon-button):focus-visible {
-  outline: none;
   box-shadow: 2px 2px 0 var(--accent-color);
+  outline: none;
 }
 
 button:not(.card__icon-button)::before {
   content: '';
   position: absolute;
-  background-color: #000;
   top: 0;
   left: 0;
+  background-color: #000;
+  transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
   block-size: 100%;
   inline-size: 100%;
-  transition: transform 0.5s ease-in-out;
 } 
 
 button:not(.card__icon-button):hover::before {
@@ -265,14 +265,14 @@ button:not(.card__icon-button):hover::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-inline: auto;
-  padding-block: 17px; 
-  padding-inline: 20px;
   gap: 8px;
-  background: #fff;
-  border: 2px #000 solid;
-  transition: box-shadow 0.3s ease;
+  margin-inline: auto;
+  border: 2px #000 solid; 
+  padding-inline: 20px;
+  padding-block: 17px;
   overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
 }
 
 
@@ -286,26 +286,26 @@ button:not(.card__icon-button):hover::before {
 
 
 .button__text {
-  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
-  font-size: 0.875rem;
   justify-self: center;
   color: #fff; /*чтобы mix-blend-mode правильно работал*/
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
   mix-blend-mode: difference;
 }
 
 
 .continue-dialog {
-  inline-size: clamp(21.3125rem, 21.05rem + 1.13vw, 22.0625rem);
-  block-size: 191px;
   padding-inline: clamp(1.875rem, 2.72rem + -0.94vw, 2.5rem);
   padding-block: 30px;
+  inline-size: clamp(21.3125rem, 21.05rem + 1.13vw, 22.0625rem);
+  block-size: 191px;
 }
 
 .dialog-content {
   display: flex;
-  gap: 20px;
-  align-items: center;
   justify-content: start;
+  align-items: center;
+  gap: 20px;
 }
 
 .continue-dialog[open] {
@@ -315,32 +315,32 @@ button:not(.card__icon-button):hover::before {
 }
 
 .dialog-icon {
+  flex-shrink: 0;
   width: 39px;
-  height: 39px;
-  flex-shrink: 0; 
+  height: 39px; 
 }
 
 .dialog-text {
+  max-width: 234px;
   font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
-  text-transform: uppercase;
-  max-width: 234px;
   line-height: 150%;
+  text-transform: uppercase;
 }
 
 .continue-dialog__button {
   all: unset;
   position: relative;
-  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   border: 2px #000 solid;
-  background-color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  padding-block: 12.5px; 
-  font-size: 0.875rem;
-  transition: box-shadow 0.3s ease;
+  padding-block: 12.5px;
   overflow: hidden;
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif; 
+  font-size: 0.875rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
 }
 
 .continue-dialog::backdrop {
