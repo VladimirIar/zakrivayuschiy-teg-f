@@ -19,6 +19,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--card-main-weight);
+  padding-block-end: 100px;
 }
 
 .page:has(.continue-dialog[open]) {
