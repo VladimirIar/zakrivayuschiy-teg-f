@@ -177,7 +177,7 @@
   transition: fill linear 0.3s 0.03s; 
 }
 
-.heart{
+.heart {
   transform-origin: center;
 }
 
@@ -189,22 +189,22 @@
   animation: sparks-appearance 0.3s 0.3s ease-in;
 }
 
-.like-icon:hover .core{
+.like-icon:hover .core {
   fill: var(--contour-color);
   transition: fill linear 0.3s 0s;
 }
 
-.like-icon:hover .main-body{
+.like-icon:hover .main-body {
   fill: var(--contour-color);
   transition: fill linear 0.3s 0.05s;
 }
 
-.like-icon:active .core{
+.like-icon:active .core {
   fill: var(--animation-fill-colour);
   transition: fill linear 0.3s 0s;
 }
 
-.like-icon:active .main-body{
+.like-icon:active .main-body {
   fill: var(--animation-fill-colour);
   transition: fill linear 0.3s 0.05s;
 }
@@ -225,14 +225,13 @@
   transition: fill linear 0.3s 0s;
 }
 
-.card__like-button{
+.card__like-button {
   all: unset;
   position: relative;
   border: 2px solid #000;
   overflow: hidden; 
   text-align: center;
-  transition: box-shadow 0.3s ease;
-  transition: border 0.3s ease;
+  transition: box-shadow 0.3s ease, border 0.3s ease; 
   block-size: 38px;
   inline-size: 130px;
   
@@ -349,8 +348,8 @@ button:not(.card__icon-button):hover::before {
 
 @media (width >= 1440px) {
   .page:has(.continue-dialog[open]) {
-    margin-inline-end: 17px;  
-}
+    margin-inline-end: 17px;
+  }
 
   .header {
     block-size: 368px;
