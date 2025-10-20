@@ -139,6 +139,7 @@
 }
 
 .card__main-text {
+  line-height: 115%;
   margin-block-start: 25px;
   font-size: 1.125rem;
 }
@@ -149,22 +150,25 @@
   justify-self: self-end;
   align-items: center;
   align-self: self-end;
-  padding-inline-end: 23px;
-  padding-block-end: 22px;
+  padding-inline-end: 25px;
+  padding-block-end: 25px;
 }
 
 .card__icon-button {
   all: unset;
   width: 38px;
-  height: 38px;
+  height: 36px;
   margin-inline-end: 7px;
-  padding-block-start: 4px;
+  margin-block: 4px;
   transition: outline 0.3s ease;
 }
+
+
 
 .card__icon-button:focus-visible {
   outline: 2px var(--accent-color) solid;
 }
+
 
 .sparks {
   opacity: 0;
@@ -242,7 +246,7 @@ button {
 }
 
 .card__button .button {
-    block-size: 38px;
+    block-size: 36px;
   inline-size: 128px;
 }
 
